@@ -49,7 +49,9 @@ export function ComingSoon() {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
-            Bientôt disponible :<br />
+            Bientôt disponible :
+            <br />
+            <br />
             <span className="text-primary">Notre app de livraison intelligente</span>
           </h2>
 

@@ -18,9 +18,9 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center justify-items-center">
           {/* Left content */}
-          <div className="relative z-10 animate-fade-in-up">
+          <div className="relative z-10 animate-fade-in-up w-full">
             <div className="flex items-center gap-3 mb-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-fade-in">
                 <span className="text-primary">Click Menu</span>
@@ -56,7 +56,7 @@ export function Hero() {
           </div>
           
           {/* Right content - Device mockups */}
-          <div className="relative flex justify-center lg:justify-end animate-fade-in-right">
+          <div className="relative flex justify-center lg:justify-center animate-fade-in-right w-full">
             {/* Tablet mockup */}
             <div className="relative w-[400px] h-[300px] md:w-[500px] md:h-[375px] rounded-2xl overflow-hidden shadow-2xl border-8 border-foreground/10 bg-card hover:scale-105 transition-transform duration-500 animate-float">
               <Image
