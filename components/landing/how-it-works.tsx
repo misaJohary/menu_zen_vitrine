@@ -5,20 +5,20 @@ import { QrCode, MousePointer, Bell } from "lucide-react"
 const steps = [
   {
     icon: QrCode,
-    title: "Scannez le menu",
-    description: "Le client scanne ou accède au menu digital via QR code ou tablette",
+    title: "Accès au menu",
+    description: "Le client accède au menu digital en toute simplicité via QR code ou tablette.",
     step: "01"
   },
   {
     icon: MousePointer,
-    title: "Commandez en quelques clics",
-    description: "Il choisit ses plats et valide sa commande facilement",
+    title: "Commande simplifiée",
+    description: "Il sélectionne ses plats et valide sa commande en quelques clics, sans effort.",
     step: "02"
   },
   {
     icon: Bell,
-    title: "Réception instantanée",
-    description: "Le restaurant reçoit la commande instantanément sur son interface",
+    title: "Transmission fluide et instantanée",
+    description: "La commande est transmise instantanément au restaurant sur son interface dédiée.",
     step: "03"
   }
 ]
