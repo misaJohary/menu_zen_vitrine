@@ -1,7 +1,9 @@
-import { 
-  MapPin, 
-  Truck, 
-  CreditCard, 
+"use client"
+
+import {
+  MapPin,
+  Truck,
+  CreditCard,
   Zap,
   Rocket
 } from "lucide-react"
@@ -33,35 +35,36 @@ export function ComingSoon() {
   return (
     <section className="bg-gradient-to-br from-primary/10 via-background to-accent/10 py-20 lg:py-28 relative overflow-hidden">
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-float-slower" />
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-8 animate-bounce">
-            <Rocket className="w-4 h-4" />
+            <Rocket className="w-4 h-4 animate-bounce-slow" />
             <span className="font-semibold text-sm">Coming Soon</span>
           </div>
-          
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 animate-fade-in-up">
             Bientôt disponible :<br />
             <span className="text-primary">Notre app de livraison intelligente</span>
           </h2>
-          
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
-            Une application de livraison nouvelle génération, inspirée des meilleures plateformes, 
+
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            Une application de livraison nouvelle génération, inspirée des meilleures plateformes,
             connectant restaurants, livreurs et clients en temps réel.
           </p>
-          
+
           {/* Features grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={index}
-                className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-primary/50 transition-all group"
+                className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-primary/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group animate-fade-in-up"
+                style={{ animationDelay: `${(index + 3) * 100}ms` }}
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-primary group-hover:scale-110 transition-all">
                   <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
