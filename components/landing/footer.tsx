@@ -1,5 +1,6 @@
-import { Leaf, Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const navigation = {
   produit: [
@@ -13,16 +14,6 @@ const navigation = {
     { name: "Téléphone 3", href: "tel:+261348982486", icon: Phone, text: "+261 34 89 824 86" },
     { name: "Email", href: "mailto:clickmenuzen@gmail.com", icon: Mail, text: "clickmenuzen@gmail.com" },
     { name: "Adresse", href: "https://maps.google.com/?q=-23.347213,43.671659", icon: MapPin, text: "Betela Tuléar" },
-  ],
-  support: [
-    { name: "Centre d'aide", href: "#help" },
-    { name: "Contact", href: "#contact" },
-    { name: "FAQ", href: "#faq" },
-  ],
-  legal: [
-    { name: "Confidentialité", href: "#privacy" },
-    { name: "CGU", href: "#terms" },
-    { name: "Cookies", href: "#cookies" },
   ],
 }
 
@@ -42,16 +33,22 @@ export function Footer() {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand column */}
-          <div className="col-span-2 animate-fade-in-up">
+          <div className="md:col-span-2 animate-fade-in-up">
             <div className="flex items-center gap-2 mb-4">
+              <Image
+                src="/transparent-logo.png"
+                alt="Click Menu ZEN Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-2xl font-bold">Click Menu</span>
               <span className="text-xl font-bold text-primary">ZEN</span>
-              <Leaf className="w-5 h-5 text-primary" />
             </div>
             
-            <p className="text-background/70 text-sm mb-6 max-w-xs leading-relaxed">
+            <p className="text-background/70 text-sm mb-6 max-w-sm leading-relaxed">
               La solution digitale pour moderniser l'expérience de commande dans votre restaurant ou hôtel.
             </p>
             
@@ -98,40 +95,8 @@ export function Footer() {
                     rel={item.name === "Adresse" ? "noopener noreferrer" : undefined}
                     className="text-background/70 hover:text-primary text-sm transition-colors flex items-center gap-2"
                   >
-                    <item.icon className="w-4 h-4" />
+                    <item.icon className="w-4 h-4 shrink-0" />
                     <span>{item.text}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Support</h3>
-            <ul className="space-y-3">
-              {navigation.support.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/70 hover:text-primary hover:translate-x-1 text-sm transition-all duration-200 inline-block"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Légal</h3>
-            <ul className="space-y-3">
-              {navigation.legal.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-background/70 hover:text-primary hover:translate-x-1 text-sm transition-all duration-200 inline-block"
-                  >
-                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -141,12 +106,8 @@ export function Footer() {
         
         {/* Bottom bar */}
         <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/50 text-sm">
+          <p className="text-background/60 text-xs">
             © {new Date().getFullYear()} Click Menu ZEN. Tous droits réservés.
-          </p>
-          
-          <p className="text-background/50 text-sm">
-            Fait avec ❤️ pour les restaurateurs
           </p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Leaf, Play, Mail } from "lucide-react"
+import { Leaf, Play, Monitor, Sparkles } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -18,9 +18,14 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center justify-items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center justify-items-center">
           {/* Left content */}
           <div className="relative z-10 animate-fade-in-up w-full">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-6 border border-primary/20">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>La solution de menu digital #1 à Madagascar</span>
+            </div>
+
             <div className="flex items-center gap-3 mb-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-fade-in">
                 <span className="text-primary">Click Menu</span>
@@ -36,50 +41,50 @@ export function Hero() {
             </p>
 
             <p className="text-muted-foreground mb-8 max-w-md leading-relaxed animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-              Menus digitaux, commandes rapides et gestion simplifiée pour restaurants et hôtels.
+              Menus digitaux interactifs, commandes en temps réel et gestion simplifiée pour restaurants, hôtels et salons de thé.
             </p>
             
             <div className="flex flex-wrap gap-4 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-              <Link href="https://youtu.be/uhuZkguK5gg" target="_blank" rel="noopener noreferrer">
+              <Link href="#screenshots">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2 rounded-full px-8 hover:scale-105 hover:shadow-xl transition-all duration-300 group">
-                  <Play className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                  Voir la démo
+                  <Monitor className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  Explorer le Produit
                 </Button>
               </Link>
-              <Link href="#contact">
-                <Button size="lg" variant="outline" className="gap-2 rounded-full px-8 border-primary text-primary hover:bg-primary/10 bg-transparent hover:scale-105 hover:shadow-lg transition-all duration-300 group">
-                  <Mail className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                  Contacter l'équipe
+              <Link href="https://youtu.be/uhuZkguK5gg" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="gap-2 rounded-full px-6 border-primary/40 text-foreground hover:bg-primary/10 bg-card hover:scale-105 hover:shadow-lg transition-all duration-300 group">
+                  <Play className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+                  Voir la démo
                 </Button>
               </Link>
             </div>
           </div>
           
-          {/* Right content - Device mockups */}
-          <div className="relative flex justify-center lg:justify-center animate-fade-in-right w-full">
-            {/* Tablet mockup */}
-            <div className="relative w-[400px] h-[300px] md:w-[500px] md:h-[375px] rounded-2xl overflow-hidden shadow-2xl border-8 border-foreground/10 bg-card hover:scale-105 transition-transform duration-500 animate-float">
+          {/* Right content - Clean dual tablet presentation (make_order & dashboard) */}
+          <div className="relative flex items-center justify-center animate-fade-in-right w-full pt-8 pb-4">
+            {/* Background Tablet: Dashboard */}
+            <div className="absolute -top-4 right-0 sm:right-2 md:right-4 z-10 w-[280px] h-[180px] sm:w-[380px] sm:h-[240px] md:w-[460px] md:h-[290px] rounded-3xl overflow-hidden shadow-xl border-6 border-foreground/10 bg-card opacity-95 hover:opacity-100 hover:scale-105 transition-all duration-500 animate-float-delayed">
               <Image
-                src="/images/screenshoot-20order.png"
-                alt="Click Menu ZEN - Interface de commande sur tablette"
+                src="/images/dashboard.png"
+                alt="Click Menu ZEN - Tableau de Bord"
                 fill
-                className="object-cover object-left-top"
+                className="object-cover object-top"
                 priority
               />
             </div>
 
-            {/* Mobile mockup */}
-            <div className="absolute -right-4 -bottom-4 md:right-4 md:bottom-0 w-[140px] h-[280px] md:w-[160px] md:h-[320px] rounded-3xl overflow-hidden shadow-2xl border-4 border-foreground/10 bg-card hover:scale-105 transition-transform duration-500 animate-float-delayed">
-              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-1 bg-foreground/20 rounded-full z-10" />
+            {/* Foreground Tablet: Make Order */}
+            <div className="relative z-20 top-6 left-0 sm:-left-4 md:-left-6 w-[300px] h-[195px] sm:w-[410px] sm:h-[260px] md:w-[490px] md:h-[310px] rounded-3xl overflow-hidden shadow-2xl border-8 border-foreground/10 bg-card hover:scale-105 transition-transform duration-500 animate-float">
               <Image
-                src="/images/screenshoot-20order.png"
-                alt="Click Menu ZEN - Interface mobile"
+                src="/images/make_order.png"
+                alt="Click Menu ZEN - Prise de Commande"
                 fill
-                className="object-cover object-left-top scale-150"
+                className="object-cover object-top"
+                priority
               />
             </div>
 
-            {/* Decorative elements */}
+            {/* Decorative glows */}
             <div className="absolute -top-8 -left-8 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-pulse" />
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-accent/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
           </div>

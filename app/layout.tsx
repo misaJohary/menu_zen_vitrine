@@ -18,23 +18,9 @@ const _inter = Inter({
 export const metadata: Metadata = {
   title: 'Click Menu ZEN – Commandez vos repas en un clic',
   description: 'Menus digitaux, commandes rapides et gestion simplifiée pour restaurants et hôtels. Digitalisez votre restaurant avec Click Menu ZEN.',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/transparent-logo.png',
+    apple: '/transparent-logo.png',
   },
 }
 
