@@ -113,6 +113,9 @@ export function Footer() {
             <Link href="/privacy" className="hover:text-primary transition-colors">
               Politique de confidentialité
             </Link>
+            <Link href="/delete-account" className="hover:text-primary transition-colors">
+              Suppression de compte
+            </Link>
           </div>
         </div>
       </div>
