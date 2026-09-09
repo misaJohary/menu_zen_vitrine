@@ -109,6 +109,11 @@ export function Footer() {
           <p className="text-background/60 text-xs">
             © {new Date().getFullYear()} Click Menu ZEN. Tous droits réservés.
           </p>
+          <div className="flex items-center gap-6 text-xs text-background/60">
+            <Link href="/privacy" className="hover:text-primary transition-colors">
+              Politique de confidentialité
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
